@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Busca CEP</title>
+
+
+  <!-- IMPORTE DO CSS #1 -->
+  <link rel="stylesheet" href="css/busacarCEP.css">
+
+
+
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- buscar CEP -->
+    <div class="lado-login">
+      <div class="login-box">
+        <h2>Digite seu CEP</h2>
+        <form>
+          <ul class="collection">
+            <input type="number" placeholder="Digite seu CEP" name="cep" id="cep">
+
+            <!-- <button >Buscar</button> -->
+            <a href="#" onclick="buscaCepFetch(); return false;" class="waves-effect waves-light btn">
+              <i class="material-icons left">search</i>
+              Buscar
+            </a>
+
+            <li class="collection-item">RUA: <span id="dadoRua"></span></li>
+            <li class="collection-item">BAIRRO: <span id="dadoBairro"></span></li>
+            <li class="collection-item">CIDADE: <span id="dadoCidade"></span></li>
+            <li class="collection-item">ESTADO: <span id="dadoEstado"></span></li>
+
+          </ul>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Lado da imagem -->
+    <div class="lado-imagem">
+      <img src="img/terra.png" alt="Imagem da Terra">
+
+    </div>
+  </div>
+
+
+
+  <!--  Scripts Externos -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- MEUS SCRIPTS DO CEP -->
+  <script src="/scripts/CEP/buscaCepAjax.js"></script>
+  <script src="/scripts/CEP/buscaCepAxios.js"></script>
+  <script src="/scripts/CEP/buscaCepFetch.js"></script>
+
+  
+</body>
+
+</html>
