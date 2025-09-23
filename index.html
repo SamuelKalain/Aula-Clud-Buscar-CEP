@@ -5,6 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
   <title>Busca CEP</title>
 
 
@@ -16,27 +18,31 @@
 
 </head>
 
-<nav id="navbar">
-  <i class="fa-solid fa-tree" id="nav-logo"> BuscarCEP</i>
+<nav id="navbarPrincipal">
+  <i class="fa-solid fa-earth-americas" id="nav-logo"> BuscarCEP</i>
 
-  <ul id="nav-list">
-    <li class="nav-item active">
-      <a href="#CEP">Inicio</a>
-    </li>
-    <li class="nav-item">
-      <a href="#RUA">Rua</a>
-    </li>
-    <li class="nav-item">
-      <a href="#LOGS">Logs</a>
-    </li>
-  </ul>
 
-  <button class="btn-default">
-    Seja um doador
-  </button>
-  <button id="mobile_btn">
+  <div id="navBar">
+
+    <ul id="nav_list">
+      <li class="nav-item">
+        <a href="#CEP">Buscar CEP</a>
+      </li>
+      <li class="nav-item">
+        <a href="#RUA">Buscar RUA</a>
+      </li>
+      <li class="nav-item">
+        <a href="#LOGS">Logs</a>
+      </li>
+    </ul>
+  </div>
+
+  <button id="stripers_btn">
     <i class="fa-solid fa-bars"></i>
   </button>
+
+
+
 </nav>
 
 </div>
@@ -91,6 +97,15 @@
   <script src="/scripts/CEP/buscaCepAjax.js"></script>
   <script src="/scripts/CEP/buscaCepAxios.js"></script>
   <script src="/scripts/CEP/buscaCepFetch.js"></script>
+
+  <script>
+    const navBar = document.getElementById("navBar");
+    const navToggle = document.getElementById("stripers_btn");
+
+    navToggle.addEventListener("click", () => {
+      navBar.classList.toggle("active");
+    });
+  </script>
 
 
 </body>
