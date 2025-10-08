@@ -6,97 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-
     <title>Busca CEP</title>
 
-
-    <!-- IMPORTE DO CSS #1 -->
-    <link rel="stylesheet" href="">
-
-
-
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/buscarRUA.css">
 </head>
-
-<nav id="navbarPrincipal">
-    <i class="fa-solid fa-earth-americas" id="nav-logo"> BuscarRUA</i>
-
-
-    <div id="navBar">
-
-        <ul id="nav_list">
-            <li class="nav-item">
-                <a href="#CEP">Buscar CEP</a>
-            </li>
-            <li class="nav-item">
-                <a href="#RUA">Buscar RUA</a>
-            </li>
-            <li class="nav-item">
-                <a href="#LOGS">LOGS</a>
-            </li>
-        </ul>
-    </div>
-
-    <button id="stripers_btn">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-
-
-
-</nav>
-
-</div>
-
 
 <body>
     <div class="container">
 
-        <!-- tab da rua -->
-        <div id="test2" class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <select onchange="pegarCidades()" id="estado" class="browser-default"></select>
-                </div>
-                <div class="input-field col s6">
-                    <select id="cidade" class="browser-default"></select>
-                </div>
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">location_on</i>
-                    <input id="rua" type="tel" class="validate">
-                    <label for="rua">Rua</label>
-                </div>
-                <div class="input-field col s6">
-                    <a onclick="buscaRua()" class="waves-effect waves-light btn"><i
-                            class="material-icons right">search</i>Enviar</a>
-                </div>
+        <!-- 🌍 NAVBAR -->
+        <nav id="navbarPrincipal">
+            <i class="fa-solid fa-earth-americas" id="nav-logo"> Buscar RUA</i>
+
+            <div id="navBar">
+                <ul id="nav_list">
+                    <li class="nav-item"><a href="../index.html">Buscar CEP</a></li>
+                    <li class="nav-item"><a href="rua.html">Buscar RUA</a></li>
+                    <li class="nav-item"><a href="#LOGS">LOGS</a></li>
+                </ul>
             </div>
 
-            <div id="lista-ruas">
-                aqui vai aparecer varias ruas
-            </div>
+            <button id="stripers_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
 
-            <div id="test3" class="col s12">
+        <!-- 🪐 Lado da imagem -->
+        <div class="lado-imagem">
+            <img src="../img/terra.png" alt="Imagem da Terra">
+        </div>
 
+        <!-- 🧭 Formulário -->
+        <div class="lado-login">
+            <div class="login-box">
+                <h2>Buscar por Rua</h2>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select onchange="pegarCidades()" id="estado" class="browser-default"></select>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="cidade" class="browser-default"></select>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">location_on</i>
+                        <input id="rua" type="tel" class="validate">
+                        <label for="rua">Rua</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <a onclick="buscaRua()" class="waves-effect waves-light btn">
+                            <i class="material-icons right">search</i>Enviar
+                        </a>
+                    </div>
+                </div>
+
+                <div id="lista-ruas">
+                    aqui vai aparecer varias ruas
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Lado da imagem -->
-    <div class="lado-imagem">
-        <img src="img/terra.png" alt="Imagem da Terra">
-
-    </div>
-    </div>
-
-
-
-    <!--  Scripts Externos -->
+    <!-- 📜 Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- MEUS SCRIPTS DO CEP -->
     <script src="/js/scripts/RUA/buscaRua.js"></script>
     <script src="/js/scripts/RUA/pegarCidades.js"></script>
     <script src="/js/scripts/RUA/pegarEstados.js"></script>
@@ -109,8 +84,6 @@
             navBar.classList.toggle("active");
         });
     </script>
-
-
 </body>
 
 </html>
