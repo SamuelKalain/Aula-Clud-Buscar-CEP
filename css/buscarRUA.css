@@ -35,6 +35,7 @@ body {
     padding: 40px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Título do login */
@@ -43,6 +44,7 @@ body {
     font-weight: 700;
     color: #111;
     margin-bottom: 20px;
+
 }
 
 /* Inputs e selects */
@@ -103,11 +105,19 @@ body {
     margin-top: 15px;
 }
 
-#lista-ruas span {
-    border-bottom: 2px solid #6200ea;
-    padding-bottom: 2px;
-    margin-left: 5px;
+
+
+#lista-ruas {
+    max-height: 400px;
+    /* ou o tamanho que quiser */
+    overflow-y: auto;
+    /* ativa scroll vertical quando passar do limite */
+    margin-top: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
 }
+
 
 /* ===== LADO DIREITO - IMAGEM ===== */
 .lado-imagem {
